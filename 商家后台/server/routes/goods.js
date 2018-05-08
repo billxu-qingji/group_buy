@@ -65,8 +65,8 @@ router.post('/del', async (ctx, next) => {
 })
 router.post('/update', async (ctx, next) => {
   try {
-    const { goodsid, desc, price, subTitle, title, type } = ctx.request.body;
-    const res = await db.query(`update goods set goods_scribe='${desc}',goods_price=${price},goods_sub_title='${subTitle}',goods_title='${title}',goods_type=${type} where goods_id=${goodsid}`);
+    const { goodsid, desc, price, subTitle, title, type, imgUrl } = ctx.request.body;
+    const res = await db.query(`update goods set goods_scribe='${desc}',goods_price=${price},goods_sub_title='${subTitle}',goods_title='${title}',goods_type=${type},goods_img_url='${imgUrl}' where goods_id=${goodsid}`);
     if (res.affectedRows) {
       ctx.body = RES.SUCCESS_RES;
     } else {

@@ -75,13 +75,14 @@ router.post('/screen', async (ctx, next) => {
     const screenInfo = ctx.request.body;
     let sqlStr = `select * from orders as o,b_user as b,c_user as c,goods as g where o.order_goods_id=g.goods_id and o.order_c_user_id=c.c_user_id and b.b_user_id=g.goods_b_user_id and b.b_user_id=${screenInfo.userid}`;
     Object.entries(screenInfo).forEach(([key, value]) => {
+      console.log(key,value);
       if (value === null || value === '') return;
       switch (key) {
         case 'userName':
-          sqlStr += ` and c.c_user_username='${value}'`;
+          sqlStr += ` and c.c_user_username like '%${value}%'`;
           break;
         case 'goodsName':
-          sqlStr += ` and g.goods_title='${value}'`;
+          sqlStr += ` and g.goods_title like '%${value}%'`;
           break;
         case 'orderState':
           sqlStr += ` and o.order_state=${value}`;

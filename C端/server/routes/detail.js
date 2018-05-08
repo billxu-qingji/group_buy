@@ -35,13 +35,23 @@ router.get('/comment', async (ctx, next) => {
 router.get('/info', async (ctx, next) => {
   try {
     const id = ctx.query.id;
-    const rows = await db.query(`select * from goods where goods_id=${id}`);
+    const starsPro = db.query(`select comment_star from orders,comments where comment_order_id=order_id and order_goods_id=${id}`)
+    const rowsPro = db.query(`select * from goods where goods_id=${id}`);
+    const [stars, rows] = await Promise.all([starsPro, rowsPro]);
+    console.log(stars, rows);
+    let aveStar = 0;
+    if (stars.length) {
+      const totalStar = stars.reduce((total, item) => {
+        return total + item.comment_star;
+      }, 0)
+      aveStar = totalStar / stars.length;
+    }
     if (rows) {
       const res = rows.map(item => {
         return {
           img: item.goods_img_url,
           title: item.goods_title,
-          star: 4,
+          star: Math.round(aveStar),
           price: item.goods_price,
           subTitle: item.goods_sub_title,
           desc: item.goods_scribe
