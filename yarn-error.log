@@ -1,0 +1,32 @@
+Arguments: 
+  F:\develop\node.js\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js server
+
+PATH: 
+  f:\develop\graphicsmagick-1.3.25-q16;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;F:\java\bin；C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\MongoDB\Server\3.4\bin\;F:\tool\php\php\php-5.6.27-nts;F:\composer;F:\develop\node.js\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;F:\tool\OpenVPN\bin;C:\Ruby25-x64\bin;F:\develop\nvm;F:\develop\node.js;F:\develop\nvm\npm;F:\develop\git\bin;F:\develop\Microsoft VS Code\bin；;F:\develop\Microsoft VS Code\bin；F:\develop\GraphicsMagick-1.3.25-Q16;F:\develop\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin;F:\tool\phantomjs-2.1.1-windows\bin;C:\Users\Administrator\AppData\Roaming\Composer\vendor\bin;F:\paython;C:\Users\Administrator\AppData\Roaming\npm;C:\Program Files (x86)\ClockworkMod\Universal Adb Driver;F:\paython\Scripts;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files\MongoDB\Server\3.4\bin;F:\tool\AppServ\Apache2.2\bin;F:\tool\AppServ\php5;F:\tool\AppServ\MySQL\bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.2.0
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Couldn't find a package.json file in "F:\\project\\毕业设计"
+      at new MessageError (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
+      at C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:40048:15
+      at Generator.next (<anonymous>)
+      at step (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:98:30)
+      at C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:109:13
+      at <anonymous>
